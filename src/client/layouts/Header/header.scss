@@ -1,0 +1,22 @@
+$header-height: .4rem;
+$header-bg: #333c47;
+$header-bg-active: #24272d;
+
+.admin-header {
+    background-color: $header-bg;
+    height: $header-height;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 998;
+
+    .user-dropdown {
+        float: right;
+        margin-right: .4rem;
+        color: #ccc;
+
+        &:hover {
+            background-color: $header-bg-active;
+        }
+    }
+}

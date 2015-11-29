@@ -1,0 +1,11 @@
+$content-header-title-fontSize: .24rem;
+
+.admin-content-header {
+    margin-bottom: .2rem;
+
+    .title {
+        font-size: $content-header-title-fontSize;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: .2rem;
+    }
+}

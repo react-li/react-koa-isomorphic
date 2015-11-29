@@ -1,0 +1,116 @@
+/* common */
+$dropdown-bg: #fff;
+$dropdown-color: #333;
+$dropdown-border-color: #ccc;
+$dropdown-border-radius: .04rem;
+$dropdown-bg-hover: #e6e6e6;
+$dropdown-min-width: 1.2rem;
+$dropdown-padding: .06rem .1rem .06rem .16rem;
+
+$dropdown-menu-padding: .05rem 0;
+$dropdown-menu-bg: #fff;
+$dropdown-menu-border-color: #ccc;
+$dropdown-menu-border-radius: .04rem;
+$dropdown-menu-bg-hover: #e6e6e6;
+$dropdown-menu-color: #333;
+$dropdown-menu-min-width: 1.2rem;
+
+$dropdown-inline-margin: 0 .2rem .2rem 0;
+
+/* 默认白色圆角按钮 */
+.as-dropdown {
+    position: relative;
+    height: 100%;
+    color: $dropdown-color;
+    background-color: $dropdown-bg;
+
+    &.inline {
+        display: inline-block;
+        margin: $dropdown-inline-margin;
+    }
+
+    button {
+        outline: none;
+        background-color: inherit;
+        color: inherit;
+        padding: $dropdown-padding;
+        border: 1px solid $dropdown-border-color;
+        border-radius: $dropdown-border-radius;
+        cursor: pointer;
+        height: 100%;
+        min-width: $dropdown-min-width;
+
+        &:hover {
+            background-color: $dropdown-bg-hover;
+        }
+
+        i {
+            position: relative;
+            padding-left: .08rem;
+        }
+    }
+}
+
+/* 与父容器融合在一起 */
+.as-dropdown-fuse {
+    position: relative;
+    height: 100%;
+    color: inherit;
+    background-color: inherit;
+
+    &.inline {
+        display: inline-block;
+        margin: $dropdown-inline-margin;
+    }
+
+    button {
+        outline: none;
+        border: none;
+        background-color: inherit;
+        color: inherit;
+        cursor: pointer;
+        height: 100%;
+        min-width: $dropdown-min-width;
+        
+        i:first-child {
+            padding-right: .08rem;
+        }
+
+        i:last-child {
+            position: relative;
+            padding-left: .08rem;
+        }
+    }
+}
+
+/* 下拉框 */
+.as-dropdown,
+.as-dropdown-fuse {
+    ul {
+        display: none;
+        min-width: $dropdown-menu-min-width;
+        margin-top: .02rem;
+        background-color: $dropdown-menu-bg;
+        padding: $dropdown-menu-padding;
+        border: 1px solid $dropdown-menu-border-color;
+        border-radius: $dropdown-menu-border-radius;
+        position: absolute;
+        left: 0;
+        top: auto;
+        z-index: 9999;
+
+        &.open {
+            display: block;
+        }
+
+        li a {
+            color: $dropdown-menu-color;
+            display: block;
+            padding: .03rem .2rem;
+
+            &:hover {
+                background-color: $dropdown-menu-bg-hover;
+            }
+        }
+    }
+}
